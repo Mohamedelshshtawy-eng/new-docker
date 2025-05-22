@@ -1,0 +1,12 @@
+services:
+  node-app :
+    build : 
+     context: .
+     target: production
+    volumes:
+      - ./src:/app/src
+    environment :
+     - NODE_ENV=production
+    command: npm start 
+
+    
